@@ -26,8 +26,11 @@ source /opt/fzf-tab-source/fzf-tab.plugin.zsh
 ```
 ### 使用
 1.fzf命令
+
 2.ls,cat,vim等命令后接空格按下tab
+
 3.rf命令：使用rg辅助fzf搜索
+
 4.rfa命令：使用rga辅助fzf搜索(相比于rg，rga还可以搜索docx、pdf、zip等文件内容等,但速度比起rg较慢,rfa同理)
 
 
