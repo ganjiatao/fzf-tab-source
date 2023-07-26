@@ -3,8 +3,11 @@ export PreViewFilePath="${0:A:h}/file_preview.zsh"
 export RUNEWIDTH_EASTASIAN=0
 export FZF_DEFAULT_OPTS="--preview 'zsh $PreViewFilePath {}' --height 30 --layout=reverse --history=$HOME/.fzfhistory"
 
-# export FZF_DEFAULT_OPTS="--preview 'zsh /opt/fzf-tab/myfzf/file_preview.zsh {}' --height 30 --layout=reverse --history=$HOME/.fzfhistory"
-export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.node_modules,bulid,dist,vender,mnt} --type f --type l" # 
+if command -v fd &>/dev/null; then
+	export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.node_modules,bulid,dist,vender,mnt} --type f --type l" 
+else 
+	export FZF_DEFAULT_COMMAND='find . \( -path "*/.git" -o -path "*/.idea" -o -path "*/.vscode" -o -path "*/node_modules" -o -path "*/build" -o -path "*/dist" -o -path "*/vendor" -o -path "*/mnt" \) -prune -o -type f -o -type l -print'
+fi
 
 
 # my
