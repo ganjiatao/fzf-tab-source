@@ -18,7 +18,7 @@
 ## 安装
 下载到任意位置(如/opt)
 ```bash
-git clone https://github.com/aslingguang/fzf-tab-source.git /opt
+git clone https://github.com/aslingguang/fzf-tab-source.git /opt/fzf-tab-source
 ```
 编辑`~/.zshrc`,添加
 ```bash
