@@ -9,8 +9,8 @@ helpinfo="  fzf-tab-source用法:
     -v, --version       版本信息/Print program version
     -h, --help          帮助信息/Display this help list"
 
-fzf_config="source /opt/fzf-tab-source/fzf-tab.plugin.zsh"
-
+script_path=$(dirname "$(readlink -f "$0")")
+fzf_config="source $script_path/fzf-tab.plugin.zsh"
 matched_line=$(grep -B1 -P "(?<!#)$fzf_config" "$HOME/.zshrc" | grep -v "#")
 
 if [[ $1 == "-a" || $1 == "--add" ]]; then

@@ -8,7 +8,7 @@ if grep -q "$fzf_config" "$zshrc_file"; then
 else
 	echo "$fzf_config" >>"$zshrc_file"
 	echo "Content appended to $zshrc_file"
-	source "$zshrc_file"
+	exec zsh -l
 fi
 
 
