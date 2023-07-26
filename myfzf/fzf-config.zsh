@@ -1,8 +1,9 @@
 # #! /usr/bin/zsh 
-export PreViewFilePath=${0:A:h}/file_preview.zsh
+export PreViewFilePath="${0:A:h}/file_preview.zsh"
 export RUNEWIDTH_EASTASIAN=0
 export FZF_DEFAULT_OPTS="--preview 'zsh $PreViewFilePath {}' --height 30 --layout=reverse --history=$HOME/.fzfhistory"
 
+# export FZF_DEFAULT_OPTS="--preview 'zsh /opt/fzf-tab/myfzf/file_preview.zsh {}' --height 30 --layout=reverse --history=$HOME/.fzfhistory"
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.node_modules,bulid,dist,vender,mnt} --type f --type l" # 
 
 
@@ -14,6 +15,7 @@ zstyle ':fzf-tab:*' group-colors $'\033[15m' $'\033[14m' $'\033[33m'$'\033[35m' 
 zstyle ':fzf-tab:*' prefix ''
 
 zstyle ':fzf-tab:complete:*:*' fzf-preview 'zsh $PreViewFilePath ${(Q)realpath}'
+# zstyle ':fzf-tab:complete:*:*' fzf-preview 'zsh /opt/fzf-tab/myfzf/file_preview.zsh ${(Q)realpath}'
 zstyle ':fzf-tab:complete:*:*' fzf-flags --height=30
 zstyle ':fzf-tab:complete:yay:*' fzf-preview 'yay -Qi $word || yay -Si $word'
 zstyle ':fzf-tab:complete:pacman:*' fzf-preview 'pacman -Qi $word || pacman -Si $word'
@@ -54,7 +56,7 @@ zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview 'case "$group" in
 
 # TLDR
 # zstyle ':fzf-tab:complete:tldr:*' fzf-preview 'tldr --color always $word'
-zstyle ':fzf-tab:complete:tldr:argument-1' fzf-preview 'tldr --color always $word'
+# zstyle ':fzf-tab:complete:tldr:argument-1' fzf-preview 'tldr --color always $word'
 
 # 要禁用或覆盖命令选项和子命令的预览，请使用
 # zstyle ':fzf-tab:complete:*:options' fzf-preview 
