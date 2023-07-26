@@ -54,32 +54,6 @@ zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview 'case "$group" in
 # zstyle ':fzf-tab:complete:tldr:*' fzf-preview 'tldr --color always $word'
 # zstyle ':fzf-tab:complete:tldr:argument-1' fzf-preview 'tldr --color always $word'
 
-# 显示文件内容
-# zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
-# export LESSOPEN='|~/.lessfilter %s'
-
-# #! /usr/bin/env sh
-# mime=$(file -bL --mime-type "$1")
-# category=${mime%%/*}
-# kind=${mime##*/}
-# if [ -d "$1" ]; then
-# 	exa -l --no-user --no-time --icons --no-permissions --no-filesize "$1" 2>/dev/null
-# 	# exa --git -hl --color=always --icons "$1"
-# # elif [ "$category" = image ]; then
-# # 	chafa "$1"
-# # 	exiftool "$1"
-# # elif [ "$kind" = vnd.openxmlformats-officedocument.spreadsheetml.sheet ] || \
-# # 	[ "$kind" = vnd.ms-excel ]; then
-# # 	in2csv "$1" | xsv table | bat -ltsv --color=always
-# elif [ "$category" = text ]; then
-# 	(bat -p --style numbers --color=always "$1") 2>/dev/null | head -1000
-# 	# bat --color=always "$1"
-# else
-# 	echo $1 是一个 $category 文件
-# 	# lesspipe.sh "$1" | bat --color=always
-# fi
-
-
 # 要禁用或覆盖命令选项和子命令的预览，请使用
 # zstyle ':fzf-tab:complete:*:options' fzf-preview 
 # zstyle ':fzf-tab:complete:*:argument-1' fzf-preview
