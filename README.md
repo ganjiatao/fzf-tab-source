@@ -12,7 +12,8 @@
 ![image](https://github.com/aslingguang/fzf-tab-source/assets/74995823/6d3b1b7e-ce22-4dfc-8cc8-d3760728ebec)
 ![image](https://github.com/aslingguang/fzf-tab-source/assets/74995823/83ed8500-4d89-47cb-924d-9739d6fdc6cc)
 ![image](https://github.com/aslingguang/fzf-tab-source/assets/74995823/5d34ce81-92b3-422d-931f-d4c33c2b27d1)
-![image](https://github.com/aslingguang/fzf-tab-source/assets/74995823/e8ee2666-84ce-4750-b8be-23fcc95c4913)
+![image](https://github.com/aslingguang/fzf-tab-source/assets/74995823/d8040cdd-d9d3-42d2-ba5a-09fa7e934530)
+
 
 ## 安装
 下载到任意位置(如/opt)
@@ -27,7 +28,7 @@ source /opt/fzf-tab-source/fzf-tab.plugin.zsh
 1.fzf命令
 2.ls,cat,vim等命令后接空格按下tab
 3.rf命令：使用rg辅助fzf搜索
-4.rfa命令：使用rga辅助fzf搜索(相比于rg，rga还可以搜索docx、pdf、zip等文件内容等,rfa同理)
+4.rfa命令：使用rga辅助fzf搜索(相比于rg，rga还可以搜索docx、pdf、zip等文件内容等,但速度比起rg较慢,rfa同理)
 
 
 
